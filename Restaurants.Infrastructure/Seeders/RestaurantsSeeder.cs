@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using Restaurants.Domain.Entities;
 using Restaurants.Infrastructure.Persistence;
 
@@ -20,7 +21,9 @@ internal class RestaurantsSeeder(RestaurantsDbContext dbContext) : IRestaurantsS
             {
                 var restaurants = GetRestaurants();
                 dbContext.Restaurants.AddRange(restaurants);
+                var asfsaf = dbContext;
                 await dbContext.SaveChangesAsync();
+                
             }
 
             //if (!dbContext.Roles.Any())
