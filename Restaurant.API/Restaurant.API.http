@@ -1,0 +1,9 @@
+@RestaurantAPI_HostAddress = https://localhost:7209
+
+GET {{RestaurantAPI_HostAddress}}/api/weatherforecast
+
+###
+
+GET {{RestaurantAPI_HostAddress}}/api/weatherforecast/currentDay
+
+###
