@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Restaurants.Domain.Repositories;
 using Restaurants.Infrastructure.Persistence;
+using Restaurants.Infrastructure.Repositories;
 using Restaurants.Infrastructure.Seeders;
 using System;
 using System.Collections.Generic;
@@ -19,5 +21,6 @@ public static class ServiceCollectionExtensions
         services.AddDbContext<RestaurantsDbContext>( options => options.UseSqlServer(connectionString));
 
         services.AddScoped<IRestaurantsSeeder, RestaurantsSeeder>();
+        services.AddScoped<IRestaurantsRepository, RestaurantsRepository>();
     }
 }
