@@ -29,11 +29,13 @@ DELETE {{RestaurantAPI_HostAddress}}/api/restaurants/7
 
 ###
 
-PATCH {{RestaurantAPI_HostAddress}}/api/restaurants/666
+PATCH {{RestaurantAPI_HostAddress}}/api/restaurants/6
 Content-Type: application/json
 
 {
-  //UpdateRestaurantCommand
+      "Name": "Own5",
+      "Description": "A cozy restaurant serving a variety of delicious dishes.",
+      "HasDelivery": false
 }
 
 ###
