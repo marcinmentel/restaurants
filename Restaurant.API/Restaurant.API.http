@@ -1,26 +1,39 @@
 @RestaurantAPI_HostAddress = https://localhost:7209
 
-GET {{RestaurantAPI_HostAddress}}/api/weatherforecast
-
-###
-
-GET {{RestaurantAPI_HostAddress}}/api/weatherforecast/currentDay
-
-###
 
 GET {{RestaurantAPI_HostAddress}}/api/restaurants
 
 ###
-GET {{RestaurantAPI_HostAddress}}/api/restaurants/3
+GET {{RestaurantAPI_HostAddress}}/api/restaurants/6
 
 ###
 POST {{RestaurantAPI_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-      "Name": "Res2",
+   "Name": "Own5",
       "Description": "A cozy restaurant serving a variety of delicious dishes.",
+      "Category": "Indiann",
+      "HasDelivery": true,
+      "ContactEmail": "info@email.com",
+      "ContactNumber": "555-1234",
+      "City": "New York",
+      "Street": "123 Main Street",
+      "PostalCode": "10-010"
       
+}
+
+###
+
+DELETE {{RestaurantAPI_HostAddress}}/api/restaurants/7
+
+###
+
+PATCH {{RestaurantAPI_HostAddress}}/api/restaurants/666
+Content-Type: application/json
+
+{
+  //UpdateRestaurantCommand
 }
 
 ###
