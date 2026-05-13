@@ -1,5 +1,5 @@
 @RestaurantAPI_HostAddress = https://localhost:7209
-@token = CfDJ8KQksnn_T7ZJi7Vk-LjRr5JubKSD67hUC4Pk2N8lr89ySFMimL0u-Gq8DG6_aNjXqOf-9oNQBfNWv_qJ1iyCUXLg6yk-8KvG9-pN5hbG8eyOHkVuylctzhP9WZIJf-gHf0tC7sbot6BmpMD6Ide2pJQ1xEZUfzNaRp4mNQJwKx_reR_IW4BcxPutDcUieEc8qFN8ROCRx0Hf6IiEO3nES1U9dq5IZ4Mzqyoj_UxisEqHR-PdeOAmZL7qhQ5vYYYJDpDjQ2BDcwwcWGj8HT4FQ60r57FCYCsmrZUhbt4kCYM-oj1y55BnpkLYQa3K3HbqRM3rRcU_78928l2-lN9_tirgS2WSGLCwJQ3yI7NVP9fYJA5ePqfw-yH-FaojsRqk2W0Dj0_i_El139rmiR2JY1032_1Q_jfLHLC9huWVa6SO95HIuDGkbzXVpy6WXuIdjyME8e6rLPj9mHTr0tz8eqv9T_qHWuekK90IlshAicrHvB622bsO7UXXLIIvjdcdfOEKB1wJwby97Mt9HjpOcXII9Y-_brVBlHk3UYO_xPtF_mw6zHOKRYgyuy1EAnpp4Ypt79k9_YTzuYgxkF18m04gk2mYkeO_gDKvc5PT461SyNh0AeMKhhv5M7mhmvihTpJHgpLBJoe-JQvmet-zIWkzj_qmgWX2vqj_0133thOJQEPs4k_h6pHatTeS-TSz7Q
+@token = CfDJ8KQksnn_T7ZJi7Vk-LjRr5L5reH_pZ42EuUcNTgirWcgBMqNcsunOu6g3xUEm-tnaJYnc7yXdLziMfITUcsFY50CyQKqcqtI-1oZsbP8Tf8vGOBtlIH1WtxBSzmbt4eyiIP7dWStcdz9eGF8F0dqv5anXGqzWYDqM4PWpOtxF09KmsfqiJExTiuk7TCqIejbR4cMTWlvjyBbPVuRyP0JJiTlKor4i0pjQNvXj0n0V48F6lNB4gnfH-Zcl7P7Mx4TFy5o2J8OFRPpaJEpQXmZEdyweZDI9elVWhvZvCm5dlWGUuJr7Y5S9_z2Rp5nNk4eV9ivDo2bmr-WInlBRQdNV_pWFB0Gu4uBxLmLVr6KrMQiPSGp0-7Mmr2J_AJvPeTzgcsEZw2SZj3wb-S-DJyrP1JhMn5dB56DE-Y5TCC0o1c83mgbRY_r9XuzdiWTFS8DDimjxgIx_7HO8nnmQd5kbWxPhEFXVPiNXwzC0xOndi0ls-iN8nOwhSzu1785IbEKZ-2f0wlxjilCdi_XEFuSD-2sMXAFpdGmf1OQv3EFXjrwubvytYRArrlIyCd_5fZHrhI80JAHqqlPqvtP4EYeq_EEkzfLWx55XvJAr6siiHp1skcVLa-bJAWa2LSLZ0awKLyIf7P9A9lG3-Op67zyqWZwCVFUKNT4BM9HQYpG1emYPHyt5owPk3IjGJl2dabYlMiHjgdQSywiNEakd9v1eWEit4rEwCjf1mxJ1lbCWuS3IXnT1BTzNtY1BfaGDr_Tjr62xBq82qFkFVL-SwofycyEsNOApfLQKf1szgUWb3seNAXL7Qj0C9TIRiZgnY4gTnNjWV0i8yFJF3iNxmU4O6tSb1CFoiu5jJ445XN5kPV3RC7_eMs-uO6Rh5-JU607nw
 
 GET {{RestaurantAPI_HostAddress}}/api/restaurants
 Authorization: Bearer {{token}}
@@ -8,12 +8,13 @@ GET {{RestaurantAPI_HostAddress}}/api/restaurants/66
 
 ###
 POST {{RestaurantAPI_HostAddress}}/api/restaurants
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
    "Name": "Own5",
       "Description": "A cozy restaurant serving a variety of delicious dishes.",
-      "Category": "Indiann",
+      "Category": "Indian",
       "HasDelivery": true,
       "ContactEmail": "info@email.com",
       "ContactNumber": "555-1234",
@@ -60,11 +61,11 @@ GET {{RestaurantAPI_HostAddress}}/api/restaurants/2/dishes/3
 
 ###
 
-POST {{RestaurantAPI_HostAddress}}/api/identity//register
+POST {{RestaurantAPI_HostAddress}}/api/identity/register
 Content-Type: application/json
 
 {
-    "email": "testuser@test.com",
+    "email": "user@test.com",
     "password": "Password1!"
 }
 ###
