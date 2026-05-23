@@ -1,4 +1,4 @@
-new: restaurant-api
+name: restaurant-api
 
 on:
   push:
