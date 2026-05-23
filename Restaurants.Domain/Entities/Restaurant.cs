@@ -12,5 +12,9 @@ public class Restaurant
     public string? ContactNumber { get; set; }
     public Address? Address { get; set; }
     public List<Dish> Dishes { get; set; } = new();
+
+    public User Owner { get; set; }
+    public string OwnerId { get; set; }
+    public string? LogoUrl { get; set; }
 }
 

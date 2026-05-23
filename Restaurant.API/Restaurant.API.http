@@ -1,5 +1,5 @@
 @RestaurantAPI_HostAddress = https://localhost:7209
-@token =CfDJ8KQksnn_T7ZJi7Vk-LjRr5I5c7gEcpums-waRWA0BuxxFRH4rQvo3IjO5N9GKqZDk_aBeYVRoE2_mWeXQJvpaPOPfewxmWu0uEfvtwENoMEwAXApVt4ZXYQt-xET9t76qfHP74O_OBhVv2JduvOGG9tBXikbT9feEBUvoH-KexyBAc-gUb1MPERD53zbImX6Y0-cxx863IrSFyni9g3gN3opssJEx4P3VJNfl7_Kc8GIyYaVBBcL4JkniBoFsoSI0p45d8wIyRsflmgRyMJj6IuUekOXxLNl6Bt2AOKejR2KLz2d5dxen9Jw4LftBNNm5XJk9orBM_Y59qtjC_pBn4431jBsH9nkfVn-dUszIm4Rohi_ITNK2YFGVKMRcgCJeFWTnlhobN6Adfhh2zG0JZCQE0K7RTIEetqhrtW_qIbK-jaSGbzi_vFyRgi30WAsyxFC0cTMlojSCv8G53hEm959nBxH02_2dWMGgGcjJQJNFX7mu7y0UDAP3jRTztRSUaDtwHWOuAmoksUMq9bG6NUsTmK-mK2Xn1TaI3izdhzqsfdZhkRNsNlNOpXmOiw1zlRC4xjyCFq34pd8Zxs68TgSguZL9tKFgsMcHa4sB0_Lqc1lhWvX2VMPddUvkuu0UUucdYI9fRk0wsCK4Jh3OHmoB2_SUH_pdJKcu-lmOcxuA3zua5IbU7z6U3TeJxdtjsCzycdizJUZR4c30ac014wKBcbw6nhAFIADYoY4XD7smdZqxfOqRExNBF8efQl8N4ayjFHpt_6Fi3SODf3cDLBjpOgl-JW-cW0R2qpRaMtQsAoIpJnQByt_dVQajPBaokoLtSFoYxDY7kD34D0WHQMAKpkb6q9ZgiufH5irQAIG_2v6wf9dCxXl1i8tpmZjcw
+@token =CfDJ8KQksnn_T7ZJi7Vk-LjRr5JkHTyA1KYu0r-GBQxuSToTr1Gj_CpZd8_Ks2dUagBLV6qFHw1SZ3mAMS2WPlF3nFc6OkSOD4nOj88YdettXtvZx3rrWwqtD4d1XL56D3D76KelpXmrqCh43bbnOmdH8sUyoyjS7mU2Ovqz6jmMEbXRMtUGYISYPxRXkovALF6SRP8X3VW7Tqk1n-ihWwnwolJ16FEBZa8xu80WlXI850F4HYDUksB-aJaDyDfDPEhvpJ0OHujwT5szvgcquvNi7T_gUuQTF-UyEjoqUeHb6n3j3WQU8yDSvGk-eQ51lyPOMIpJNrwcQdMxJUpds-96byDUjms61BElCJlWMTpXokHsLPvFeUm6avrm_-jgD9mcK-gTphlMeyA96iGWzKjtR2iVuIpTy0dk7qmYk8yePA4ya-QIQV6D3PlOOpi_IWIzLoKU0UCGSWhy2PIOZ_PVJ9p9Vbf0yS7BY66H8_Rt_GDQ26R1_XH-15xNEoTb_YHTaLm5TzQeT2jOnqYGPrdrNDA2NZ6Upt91_fyb6l2Bnp1Kp-eVTK5jLjGVPJPnehiD0TIs1ej7_Drhq5a_99jZ0MD2qctfO5YgKyHUKSoinB6VmG7-uxUxz9EJyraHc5BxrQogcwCG9k4f10clxpOdYo03JFcvwD313p_uiiCWqUyF8WlA6VD1ja4b5nzGLCqOGhGC1oGNnKTZf2AaJnjg5lsoGwNoTuhMaXJU1AQTm84nrbshxmydvUTZ5CeU0JGhqZkssd5e3ri07d6Di3vsOusrXP-OwaCzlqIZw7xorwSWALG8opszVvmpeouyZPdkT3QsiNkSpo5E7Ch8kgwIyurHsfDHVlQdEX7E3qWCo7kJB0ZEndP_jJWjoLMoHwq0Bg
 
 GET {{RestaurantAPI_HostAddress}}/api/restaurants
 Authorization: Bearer {{token}}
@@ -12,7 +12,7 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-   "Name": "Own5",
+   "Name": "Owner User",
       "Description": "A cozy restaurant serving a variety of delicious dishes.",
       "Category": "Indian",
       "HasDelivery": true,
@@ -54,7 +54,7 @@ Content-Type: application/json
 ###
 
 GET {{RestaurantAPI_HostAddress}}/api/restaurants/2/dishes
-
+Authorization: Bearer {{token}}
 ###
 
 GET {{RestaurantAPI_HostAddress}}/api/restaurants/2/dishes/3
@@ -73,6 +73,6 @@ POST {{RestaurantAPI_HostAddress}}/api/identity/login
 Content-Type: application/json
 
 {
-    "email": "testuser@test.com",
+    "email": "owner@test.com",
     "password": "Password1!"
 }

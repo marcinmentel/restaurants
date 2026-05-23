@@ -32,7 +32,7 @@ namespace Restaurants.Application.Users
                 ? (DateOnly?)null 
                 : DateOnly.ParseExact(dateOfBirthString, "yyyy-MM-dd");
 
-            return new CurrentUser(userId, email, roles);
+            return new CurrentUser(userId, email, roles, nationality, dateOfBirth);
         }
     }
 }
